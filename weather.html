@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather Forecast</title>
+	<link rel="stylesheet" href="weather.css">
+	<script type="text/javascript" src="weather.js"></script>
+</head>
+<body onload="findCoords_load()">
+	<div class="title-small">Weather Forecast</div>
+	<div class="search-field">
+		<input type="text" class="text-field" id="city" autocomplete="off" placeholder="location">
+			<div>
+				<button onclick="findCoords()" class="button">
+					<img style="margin-top: 2px; margin-right: 2px;" src="search.png" alt="Generate Button">
+				</button>
+			</div>
+	</div>
+	
+	<!-- This div is responsible for the top left corner details -->
+	<div class="top-left">
+		<div><img style="height: 7vh; width: 7vh;" src="cloudy.png" alt="cloud image"></div>
+		<span id="weather_description"></span>
+	</div>
+
+	<hr class="media-visibility">
+
+	<!-- This div is responsible for the bottom left corner details -->
+	<div class="weather-main" id="wait">
+		<div>
+			<div><span id="temp"></span></div>
+			<div id="city-name"></div><br>
+		</div>
+	</div>
+	
+	<hr class="media-visibility">
+
+	<!-- This div is to provide blur effect on the right side of the screen -->
+	<div class="weather-right-img">
+	</div>
+
+
+	<!-- This div will display the actual content on the right side -->
+	<div class="weather-right-other">
+		<div class="title">Weather Forecast</div>
+		<div class="center" id="forAnimationBud">
+			<input type="text" class="text-field" id="alt-city" autocomplete="off" placeholder="location">
+				<div>
+					<button onclick="findCoords()" class="button">
+						<img style="margin-top: 2px; margin-right: 2px;" src="search.png" alt="Generate Button">
+					</button>
+				</div>
+		</div>
+		<hr class="sep">
+		<div class="details">Pressure <span style="margin-right: 1vh;" id="pressure"></span></div>
+		<hr class="sep">
+		
+		<div class="details humidity">humidity <span id="humidity"></span></div>
+		<hr class="sep">
+		
+		<div class="details">Wind Degree <span id="wind_deg"></span></div>
+		<hr class="sep">
+		
+		<div class="details">Wind Speed <span id="wind_speed"></span></div>
+		<hr class="sep">
+		
+		<div class="details">Feels Like <span id="feels_like"></span></div>
+	</div>
+
+</body>
+</html>
