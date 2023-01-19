@@ -36,7 +36,7 @@ body{
 }
 .weather-right-other{
 	color: white;
-	font-size: large;
+	font-size: x-large;
 	height: 100vh;
 	font-family:system-ui;
 	position: absolute;
@@ -56,7 +56,7 @@ img{
 	border: none;
 	color: white;
 	border-bottom: 2px solid gray;
-	font-size: 2vh;
+	font-size: 3vh;
 	background: top;
 	font-family:system-ui;
 }
@@ -64,7 +64,7 @@ img{
 	padding: 2vh;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 5vh;
+	margin-bottom: 3vh;
 
 }
 .button{
@@ -113,7 +113,15 @@ img{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   background-color: white;
 }
-
+.error1{
+	/* color: white; */
+	display: none;
+	font-size:medium;
+	background-color: red;
+}
+.error2{
+	display: none;
+}
 @media (max-width: 500px){
 
 	.button:hover{
@@ -142,6 +150,16 @@ img{
 
 	}
 
+	.error1{
+		display: none;
+	}
+	.error2{
+		margin-top: 2vh;
+		display: none;
+		font-size:medium;
+		background-color: red;
+	}
+
 	.title{
 		display: none;
 	}
@@ -160,7 +178,8 @@ img{
 		margin-left: 2vh;
 		margin-right: 0vh;
 		height: max-content;
-		width: 90%;;
+		width: 90%;
+		font-size: large;
 	}
 
 	.media-visibility{
@@ -182,6 +201,7 @@ img{
 	}
 
 	.text-field{
+		font-size: 3vh;
 		margin-left: 2vh;
 		width: 80%;
 	}
